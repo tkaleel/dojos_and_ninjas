@@ -1,0 +1,17 @@
+
+<form action="/create_ninja" method="POST">
+        <select name="dojo_id">
+        {% for dojo in dojos %}
+        <option value={{dojo.id}}>{{dojo.name}}</option>
+        {% endfor %}
+        </select>
+    
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name">
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name">
+        <input type="submit" value="Add Ninja">
+    
+</form>
+
+<a class="navlist" href="/">Home</a>

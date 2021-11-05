@@ -1,0 +1,17 @@
+<h1>All Dojos</h1>
+
+<h2>Add a New Dojo</h1>
+    <form action="/create_dojo" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name">
+        <input type="submit" value="Add Dojo">
+    </form>
+
+{% for one_dojo in dojos %}
+<p>Name: {{one_dojo.name}}</p>
+<p>ID: {{one_dojo.id}}</p>
+<p>Created At: {{one_dojo.created_at}}</p>
+<a href="/show/{{ one_dojo.id }}">Show</a>
+<hr>
+{% endfor %}
+<a class="navlist" href="/ninja/new">Create a New Ninja</a>
